@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能计算课题组 | 创新研究，引领未来</title>
+    <meta name="description" content="专注于人工智能、机器学习和数据科学的创新研究团队">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>智能计算课题组</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#about" class="nav-link">关于我们</a></li>
+                <li><a href="#people" class="nav-link">团队成员</a></li>
+                <li><a href="#research" class="nav-link">研究方向</a></li>
+                <li><a href="#publications" class="nav-link">学术成果</a></li>
+                <li><a href="#news" class="nav-link">新闻动态</a></li>
+                <li><a href="#contact" class="nav-link">联系我们</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页横幅 -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">智能计算课题组</h1>
+                <p class="hero-subtitle">探索人工智能前沿，推动科技创新发展</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="memberCount">6</span>
+                        <span class="stat-label">团队成员</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="publicationCount">5</span>
+                        <span class="stat-label">发表论文</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">研究领域</span>
+                    </div>
+                </div>
+                <a href="#research" class="cta-button">了解我们的研究</a>
+        <!-- 隐藏的管理入口 -->
+        <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+            <button onclick="showAdminLogin()" style="
+                background: rgba(0,0,0,0.1);
+                border: none;
+                color: rgba(255,255,255,0.5);
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 12px;
+                cursor: pointer;
+                opacity: 0.3;
+                transition: opacity 0.3s;
+            " onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='0.3'">
+                Admin
+            </button>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>关于我们</h2>
+                <p>致力于人工智能领域的创新研究与应用</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>我们的使命</h3>
+                    <p>智能计算课题组成立于2020年，专注于人工智能、机器学习、深度学习等前沿技术的研究与应用。我们致力于推动人工智能技术的发展，培养优秀的科研人才，为社会数字化转型贡献力量。</p>
+
+                    <h3>我们的愿景</h3>
+                    <p>成为国际一流的智能计算研究团队，在人工智能领域取得突破性进展，推动产学研深度融合，为国家科技创新发展贡献力量。</p>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-brain"></i>
+                        <p>AI Research Lab</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 团队成员 -->
+    <section id="people" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>团队成员</h2>
+                <p>汇聚优秀人才，共创美好未来</p>
+            </div>
+            <div class="people-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="professor">教授</button>
+                <button class="filter-btn" data-filter="phd">博士生</button>
+                <button class="filter-btn" data-filter="master">硕士生</button>
+                <button class="filter-btn" data-filter="postdoc">博士后</button>
+            </div>
+            <div class="people-grid" id="peopleGrid">
+                <div class="person-card" data-position="professor">
+                    <div class="avatar">张</div>
+                    <h3>张伟教授</h3>
+                    <span class="person-role">教授</span>
+                    <p>张伟教授是人工智能领域的知名专家，在机器学习和深度学习方面有着丰富的研究经验。主持国家自然科学基金项目3项，发表SCI论文50余篇，其中多篇发表在国际顶级期刊和会议上。</p>
+                    <div class="person-research">
+                        <span class="research-tag">机器学习</span>
+                        <span class="research-tag">深度学习</span>
+                        <span class="research-tag">计算机视觉</span>
+                    </div>
+                    <a href="mailto:zhangwei@university.edu.cn" class="person-email">
+                        <i class="fas fa-envelope"></i> zhangwei@university.edu.cn
+                    </a>
+                </div>
+                <div class="person-card" data-position="phd">
+                    <div class="avatar">李</div>
+                    <h3>李明</h3>
+                    <span class="person-role">博士生</span>
+                    <p>专注于自然语言处理和文本挖掘技术的研究，已发表多篇高水平论文。研究方向包括机器翻译、情感分析和知识图谱构建。</p>
+                    <div class="person-research">
+                        <span class="research-tag">自然语言处理</span>
+                        <span class="research-tag">文本挖掘</span>
+                    </div>
+                    <a href="mailto:liming@stu.university.edu.cn" class="person-email">
+                        <i class="fas fa-envelope"></i> liming@stu.university.edu.cn
+                    </a>
+                </div>
+                <div class="person-card" data-position="master">
+                    <div class="avatar">王</div>
+                    <h3>王小红</h3>
+                    <span class="person-role">硕士生</span>
+                    <p>研究兴趣包括计算机视觉和图像处理，参与多个重要项目的研究工作。在目标检测和图像分割方面有深入研究。</p>
+                    <div class="person-research">
+                        <span class="research-tag">计算机视觉</span>
+                        <span class="research-tag">图像处理</span>
+                    </div>
+                    <a href="mailto:wangxh@stu.university.edu.cn" class="person-email">
+                        <i class="fas fa-envelope"></i> wangxh@stu.university.edu.cn
+                    </a>
+                </div>
+                <div class="person-card" data-position="postdoc">
+                    <div class="avatar">陈</div>
+                    <h3>陈博士</h3>
+                    <span class="person-role">博士后</span>
+                    <p>博士后研究员，专注于强化学习和智能决策系统的研究。在深度强化学习和多智能体系统方面有突出贡献。</p>
+                    <div class="person-research">
+                        <span class="research-tag">强化学习</span>
+                        <span class="research-tag">智能决策</span>
+                    </div>
+                    <a href="mailto:chenboshi@university.edu.cn" class="person-email">
+                        <i class="fas fa-envelope"></i> chenboshi@university.edu.cn
+                    </a>
+                </div>
+                <div class="person-card" data-position="master">
+                    <div class="avatar">刘</div>
+                    <h3>刘芳</h3>
+                    <span class="person-role">硕士生</span>
+                    <p>硕士研究生，研究方向为机器学习和数据挖掘技术。在推荐系统和用户行为分析方面有深入研究。</p>
+                    <div class="person-research">
+                        <span class="research-tag">机器学习</span>
+                        <span class="research-tag">数据挖掘</span>
+                    </div>
+                    <a href="mailto:liufang@stu.university.edu.cn" class="person-email">
+                        <i class="fas fa-envelope"></i> liufang@stu.university.edu.cn
+                    </a>
+                </div>
+                <div class="person-card" data-position="phd">
+                    <div class="avatar">赵</div>
+                    <h3>赵强</h3>
+                    <span class="person-role">博士生</span>
+                    <p>博士研究生，专注于深度学习和神经网络架构的研究。在神经网络结构搜索和模型压缩方面有重要成果。</p>
+                    <div class="person-research">
+                        <span class="research-tag">深度学习</span>
+                        <span class="research-tag">神经网络</span>
+                    </div>
+                    <a href="mailto:zhaoqiang@stu.university.edu.cn" class="person-email">
+                        <i class="fas fa-envelope"></i> zhaoqiang@stu.university.edu.cn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 研究方向 -->
+    <section id="research" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>研究方向</h2>
+                <p>多领域交叉融合，探索前沿技术</p>
+            </div>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>机器学习</h3>
+                    <p>深度学习、强化学习、迁移学习等算法研究与应用</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>计算机视觉</h3>
+                    <p>图像识别、目标检测、语义分割等视觉技术研究</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>自然语言处理</h3>
+                    <p>文本分析、机器翻译、对话系统等NLP技术应用</p>
+                </div>
+                <div class="research-card">
+                    <div class="research-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>智能系统</h3>
+                    <p>智能推荐、智能决策、自动化系统等应用开发</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学术成果 -->
+    <section id="publications" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>学术成果</h2>
+                <p>高质量的研究成果，推动学术进步</p>
+            </div>
+            <div class="publications-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="journal">期刊论文</button>
+                <button class="filter-btn" data-filter="conference">会议论文</button>
+                <button class="filter-btn" data-filter="preprint">预印本</button>
+            </div>
+            <div class="publications-list" id="publicationsList">
+                <!-- 论文列表将动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻动态 -->
+    <section id="news" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>新闻动态</h2>
+                <p>关注最新研究进展和团队动态</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-date">2024-03-15</div>
+                    <h3>课题组在CVPR 2024发表重要论文</h3>
+                    <p>我们的研究成果"基于深度学习的图像识别新方法"被计算机视觉顶级会议CVPR 2024接收...</p>
+                </div>
+                <div class="news-card">
+                    <div class="news-date">2024-03-10</div>
+                    <h3>欢迎新成员加入</h3>
+                    <p>博士生李明和硕士生王小红正式加入课题组，期待他们在人工智能领域的新探索...</p>
+                </div>
+                <div class="news-card">
+                    <div class="news-date">2024-03-01</div>
+                    <h3>国际合作项目启动</h3>
+                    <p>与MIT人工智能实验室的合作项目正式启动，共同探索机器学习前沿技术...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>联系我们</h2>
+                <p>欢迎与我们交流合作</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>地址</h4>
+                            <p>北京市海淀区清华大学东主楼9区</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                    <div>
+                            <h4>邮箱</h4>
+                            <p>contact@intellab.edu.cn</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>电话</h4>
+                            <p>+86-010-6279-5000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>发送消息</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="姓名" required>
+                        <input type="email" placeholder="邮箱" required>
+                        <input type="text" placeholder="主题" required>
+                        <textarea placeholder="消息内容" required></textarea>
+                        <button type="submit">发送消息</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 管理后台 -->
+    <section id="admin" class="section admin-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>管理后台</h2>
+                <p>管理团队成员和学术成果</p>
+                <button onclick="app.logoutAdmin()" style="
+                    background: #ef4444;
+                    color: white;
+                    border: none;
+                    padding: 0.5rem 1rem;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 0.9rem;
+                    margin-top: 1rem;
+                ">
+                    <i class="fas fa-sign-out-alt"></i> 退出登录
+                </button>
+            </div>
+
+            <!-- 管理导航 -->
+            <div class="admin-nav">
+                <button class="admin-nav-btn active" data-tab="members">成员管理</button>
+                <button class="admin-nav-btn" data-tab="publications">论文管理</button>
+                <button class="admin-nav-btn" data-tab="settings">系统设置</button>
+            </div>
+
+            <!-- 成员管理 -->
+            <div class="admin-tab" id="membersTab">
+                <div class="admin-actions">
+                    <button class="add-btn" onclick="showAddMemberModal()">
+                        <i class="fas fa-plus"></i> 添加成员
+                    </button>
+                    <button class="add-btn" onclick="showImportMembersModal()" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                        <i class="fas fa-users"></i> 批量导入成员
+                    </button>
+                    <button class="add-btn" onclick="deleteSelectedMembers()" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
+                        <i class="fas fa-trash"></i> 批量删除
+                    </button>
+                </div>
+                <div class="search-filter">
+                    <input type="text" id="memberSearch" placeholder="搜索成员..." onkeyup="filterMembers()">
+                    <select id="memberFilter" onchange="filterMembers()">
+                        <option value="all">全部职位</option>
+                        <option value="professor">教授</option>
+                        <option value="phd">博士生</option>
+                        <option value="master">硕士生</option>
+                        <option value="postdoc">博士后</option>
+                    </select>
+                </div>
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th width="30"><input type="checkbox" id="selectAllMembers" onclick="toggleSelectAllMembers()"></th>
+                                <th>姓名</th>
+                                <th>职位</th>
+                                <th>研究方向</th>
+                                <th>邮箱</th>
+                                <th>教育背景</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="membersTableBody">
+                            <!-- 成员列表将动态生成 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 论文管理 -->
+            <div class="admin-tab" id="publicationsTab" style="display: none;">
+                <div class="admin-actions">
+                    <button class="add-btn" onclick="showAddPublicationModal()">
+                        <i class="fas fa-plus"></i> 添加论文
+                    </button>
+                    <button class="add-btn" onclick="showImportPublicationsModal()" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        <i class="fas fa-file-import"></i> 批量导入
+                    </button>
+                    <button class="add-btn" onclick="deleteSelectedPublications()" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
+                        <i class="fas fa-trash"></i> 批量删除
+                    </button>
+                </div>
+                <div class="search-filter">
+                    <input type="text" id="publicationSearch" placeholder="搜索论文..." onkeyup="filterPublications()">
+                    <select id="publicationFilter" onchange="filterPublications()">
+                        <option value="all">全部类型</option>
+                        <option value="journal">期刊论文</option>
+                        <option value="conference">会议论文</option>
+                        <option value="preprint">预印本</option>
+                    </select>
+                    <input type="number" id="yearFilter" placeholder="年份" onchange="filterPublications()" style="width: 100px;">
+                </div>
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th width="30"><input type="checkbox" id="selectAllPublications" onclick="toggleSelectAllPublications()"></th>
+                                <th>标题</th>
+                                <th>作者</th>
+                                <th>期刊/会议</th>
+                                <th>年份</th>
+                                <th>类型</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="publicationsTableBody">
+                            <!-- 论文列表将动态生成 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 系统设置 -->
+            <div class="admin-tab" id="settingsTab" style="display: none;">
+                <div class="settings-form">
+                    <h3>网站设置</h3>
+                    <form id="settingsForm">
+                        <div class="form-group">
+                            <label>课题组名称</label>
+                            <input type="text" id="groupName" value="智能计算课题组">
+                        </div>
+                        <div class="form-group">
+                            <label>课题组描述</label>
+                            <textarea id="groupDescription">探索人工智能前沿，推动科技创新发展</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>联系方式</label>
+                            <input type="text" id="groupContact" value="contact@intellab.edu.cn">
+                        </div>
+                        <button type="submit">保存设置</button>
+                    </form>
+
+                    <hr style="margin: 2rem 0; border: none; border-top: 1px solid #e5e7eb;">
+
+                    <h3>数据管理</h3>
+                    <div class="data-management">
+                        <div class="form-group">
+                            <label>导出数据</label>
+                            <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 0.5rem;">导出所有成员和论文数据为JSON文件</p>
+                            <button onclick="exportData()" class="save-btn" style="background: linear-gradient(135deg, #10b981, #059669);">
+                                <i class="fas fa-download"></i> 导出数据
+                            </button>
+                        </div>
+
+                        <div class="form-group">
+                            <label>导入数据</label>
+                            <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 0.5rem;">从备份文件恢复数据（将覆盖当前数据）</p>
+                            <input type="file" id="backupFile" accept=".json" style="display: block; margin-bottom: 0.5rem;">
+                            <button onclick="importData()" class="save-btn" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                                <i class="fas fa-upload"></i> 导入数据
+                            </button>
+                        </div>
+
+                        <div class="form-group">
+                            <label>清空所有数据</label>
+                            <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 0.5rem;">清空所有成员和论文数据（不可恢复）</p>
+                            <button onclick="clearAllData()" class="save-btn" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
+                                <i class="fas fa-trash"></i> 清空数据
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 模态框 -->
+    <div id="memberModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('memberModal')">&times;</span>
+            <h2 id="memberModalTitle">添加成员</h2>
+            <form id="memberForm">
+                <input type="hidden" id="memberId">
+                <div class="form-group">
+                    <label>姓名</label>
+                    <input type="text" id="memberName" required>
+                </div>
+                <div class="form-group">
+                    <label>职位</label>
+                    <select id="memberPosition" required>
+                        <option value="professor">教授</option>
+                        <option value="phd">博士生</option>
+                        <option value="master">硕士生</option>
+                        <option value="postdoc">博士后</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>邮箱</label>
+                    <input type="email" id="memberEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>研究方向</label>
+                    <input type="text" id="memberResearch" placeholder="多个方向用逗号分隔">
+                </div>
+                <div class="form-group">
+                    <label>个人简介</label>
+                    <textarea id="memberBio" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>教育背景</label>
+                    <input type="text" id="memberEducation" placeholder="最高学历">
+                </div>
+                <div class="form-group">
+                    <label>工作经历</label>
+                    <textarea id="memberExperience" rows="3" placeholder="按时间顺序填写，每行一个经历"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" onclick="closeModal('memberModal')" class="cancel-btn">取消</button>
+                    <button type="submit" class="save-btn">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="publicationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('publicationModal')">&times;</span>
+            <h2 id="publicationModalTitle">添加论文</h2>
+            <form id="publicationForm">
+                <input type="hidden" id="publicationId">
+                <div class="form-group">
+                    <label>标题</label>
+                    <input type="text" id="publicationTitle" required>
+                </div>
+                <div class="form-group">
+                    <label>作者</label>
+                    <input type="text" id="publicationAuthors" placeholder="多个作者用逗号分隔" required>
+                </div>
+                <div class="form-group">
+                    <label>期刊/会议</label>
+                    <input type="text" id="publicationJournal" required>
+                </div>
+                <div class="form-group">
+                    <label>年份</label>
+                    <input type="number" id="publicationYear" required>
+                </div>
+                <div class="form-group">
+                    <label>类型</label>
+                    <select id="publicationType" required>
+                        <option value="journal">期刊论文</option>
+                        <option value="conference">会议论文</option>
+                        <option value="preprint">预印本</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>DOI</label>
+                    <input type="text" id="publicationDoi">
+                </div>
+                <div class="form-group">
+                    <label>摘要</label>
+                    <textarea id="publicationAbstract" rows="4"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" onclick="closeModal('publicationModal')" class="cancel-btn">取消</button>
+                    <button type="submit" class="save-btn">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 论文批量导入模态框 -->
+    <div id="importPublicationsModal" class="modal">
+        <div class="modal-content" style="max-width: 600px;">
+            <span class="close" onclick="closeModal('importPublicationsModal')">&times;</span>
+            <h2><i class="fas fa-file-import"></i> 批量导入论文</h2>
+            <div class="import-section">
+                <div class="import-tabs">
+                    <button class="import-tab-btn active" data-tab="text">文本粘贴</button>
+                    <button class="import-tab-btn" data-tab="file">文件上传</button>
+                </div>
+
+                <div class="import-tab-content" id="textTab">
+                    <p>粘贴引用文献（支持BibTeX、APA、编号格式），每行一个：</p>
+                    <textarea id="citationText" rows="10" placeholder="示例：&#10;@article{key, title={Deep Learning}, author={LeCun, Y. and Bengio, Y.}, journal={Nature}, year={2015}}&#10;LeCun, Y., & Bengio, Y. (2015). Deep learning. Nature, 521(7553), 436-444.&#10;[1] LeCun, Y. &#34;Deep learning.&#34; Nature, 521, 2015."></textarea>
+                    <button onclick="parseCitations()" class="save-btn">解析引用</button>
+                </div>
+
+                <div class="import-tab-content" id="fileTab" style="display: none;">
+                    <p>上传包含引用信息的文件（CSV、TXT）：</p>
+                    <input type="file" id="citationFile" accept=".csv,.txt" style="display: block; margin: 1rem 0;">
+                    <button onclick="handleFileUpload()" class="save-btn">上传并解析</button>
+                </div>
+
+                <div id="importPreview" style="margin-top: 1rem; display: none;">
+                    <h4>预览（将导入 <span id="previewCount">0</span> 篇论文）：</h4>
+                    <div id="previewList" style="max-height: 200px; overflow-y: auto; border: 1px solid #e5e7eb; padding: 1rem; border-radius: 5px;"></div>
+                    <div class="form-actions" style="margin-top: 1rem;">
+                        <button onclick="closeModal('importPublicationsModal')" class="cancel-btn">取消</button>
+                        <button onclick="confirmImport()" class="save-btn">确认导入</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 成员批量导入模态框 -->
+    <div id="importMembersModal" class="modal">
+        <div class="modal-content" style="max-width: 600px;">
+            <span class="close" onclick="closeModal('importMembersModal')">&times;</span>
+            <h2><i class="fas fa-users"></i> 批量导入成员</h2>
+            <div class="import-section">
+                <p>粘贴成员信息（CSV格式，用逗号分隔）：</p>
+                <textarea id="membersText" rows="10" placeholder="姓名,职位,邮箱,研究方向,个人简介,教育背景&#10;张三,professor,zhangsan@university.edu.cn,机器学习,教授，研究方向...&#10;李四,phd,lisi@stu.university.edu.cn,深度学习,博士生..."></textarea>
+                <button onclick="parseMembers()" class="save-btn">解析成员信息</button>
+
+                <div id="membersPreview" style="margin-top: 1rem; display: none;">
+                    <h4>预览（将导入 <span id="membersPreviewCount">0</span> 个成员）：</h4>
+                    <div id="membersPreviewList" style="max-height: 200px; overflow-y: auto; border: 1px solid #e5e7eb; padding: 1rem; border-radius: 5px;"></div>
+                    <div class="form-actions" style="margin-top: 1rem;">
+                        <button onclick="closeModal('importMembersModal')" class="cancel-btn">取消</button>
+                        <button onclick="confirmMembersImport()" class="save-btn">确认导入</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 管理登录模态框 -->
+    <div id="adminLoginModal" class="modal">
+        <div class="modal-content" style="max-width: 400px;">
+            <span class="close" onclick="closeModal('adminLoginModal')">&times;</span>
+            <h2><i class="fas fa-lock"></i> 管理员登录</h2>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label>管理密码</label>
+                    <input type="password" id="adminPassword" placeholder="请输入管理密码" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" onclick="closeModal('adminLoginModal')" class="cancel-btn">取消</button>
+                    <button type="submit" class="save-btn">登录</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>智能计算课题组</h3>
+                    <p>致力于人工智能领域的创新研究与应用</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#research">研究方向</a></li>
+                        <li><a href="#publications">学术成果</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p><i class="fas fa-envelope"></i> contact@intellab.edu.cn</p>
+                    <p><i class="fas fa-phone"></i> +86-010-6279-5000</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 北京市海淀区清华大学</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 智能计算课题组. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

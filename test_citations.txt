@@ -1,0 +1,10 @@
+@article{lecun2015deep,
+  title={Deep learning},
+  author={LeCun, Yann and Bengio, Yoshua and Hinton, Geoffrey},
+  journal={Nature},
+  year={2015}
+}
+
+LeCun, Y., & Bengio, Y. (2015). Deep learning. Nature, 521(7553), 436-444.
+
+[1] Goodfellow, I. "Deep Learning." MIT Press, 2016.

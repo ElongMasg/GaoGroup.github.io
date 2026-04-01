@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人介绍 - 智能计算课题组</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .profile-container {
+            max-width: 1000px;
+            margin: 100px auto 50px;
+            padding: 0 20px;
+        }
+
+        .profile-header {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .profile-info h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .profile-role {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #2563eb;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .profile-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #6b7280;
+        }
+
+        .contact-item i {
+            color: #2563eb;
+            width: 20px;
+        }
+
+        .profile-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .profile-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .profile-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .profile-section h2 i {
+            color: #2563eb;
+        }
+
+        .research-areas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .research-area {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .publications-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .publication-item {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 1.5rem;
+            border-left: 4px solid #2563eb;
+        }
+
+        .publication-title {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-abstract {
+            color: #6b7280;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 4rem;
+            color: #6b7280;
+        }
+
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .profile-content {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-avatar {
+                width: 150px;
+                height: 150px;
+                font-size: 3rem;
+            }
+
+            .profile-info h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>智能计算课题组</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">返回主页</a></li>
+                <li><a href="index.html#people" class="nav-link">团队成员</a></li>
+                <li><a href="index.html#publications" class="nav-link">学术成果</a></li>
+                <li><a href="index.html#contact" class="nav-link">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 个人介绍内容 -->
+    <div class="profile-container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> 返回主页
+        </a>
+
+        <div id="profileContent">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>加载个人信息中...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script>
+        class ProfilePage {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.loadProfile();
+            }
+
+            loadProfile() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const memberId = urlParams.get('id');
+
+                if (!memberId) {
+                    this.showError('未找到成员ID');
+                    return;
+                }
+
+                const member = dataManager.getMembers().find(m => m.id === memberId);
+                const publications = dataManager.getPublications().filter(p =>
+                    p.authors.includes(this.getMemberName(member))
+                );
+
+                if (!member) {
+                    this.showError('未找到该成员信息');
+                    return;
+                }
+
+                this.renderProfile(member, publications);
+            }
+
+            getMemberName(member) {
+                return member.name.replace('教授', '').replace('博士', '').replace('硕士', '').trim();
+            }
+
+            renderProfile(member, publications) {
+                const positionNames = {
+                    professor: '教授',
+                    phd: '博士生',
+                    master: '硕士生',
+                    postdoc: '博士后'
+                };
+
+                const profileContent = document.getElementById('profileContent');
+
+                profileContent.innerHTML = `
+                    <!-- 个人信息头部 -->
+                    <div class="profile-header">
+                        <div class="profile-avatar">${member.name.charAt(0)}</div>
+                        <div class="profile-info">
+                            <h1>${member.name}</h1>
+                            <span class="profile-role">${positionNames[member.position] || member.position}</span>
+                            <div class="profile-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>${member.email}</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>加入时间: ${member.joinDate || '未知'}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 详细信息 -->
+                    <div class="profile-content">
+                        <!-- 左侧内容 -->
+                        <div class="profile-main">
+                            <!-- 个人简介 -->
+                            <div class="profile-section">
+                                <h2><i class="fas fa-user"></i> 个人简介</h2>
+                                <p>${member.bio || '暂无个人简介'}</p>
+                            </div>
+
+                            <!-- 教育背景 -->
+                            ${member.education ? `
+                                <div class="profile-section">
+                                    <h2><i class="fas fa-graduation-cap"></i> 教育背景</h2>
+                                    <p>${member.education}</p>
+                                </div>
+                            ` : ''}
+
+                            <!-- 工作经历 -->
+                            ${member.experience ? `
+                                <div class="profile-section">
+                                    <h2><i class="fas fa-briefcase"></i> 工作经历</h2>
+                                    <div style="white-space: pre-line;">${member.experience}</div>
+                                </div>
+                            ` : ''}
+
+                            <!-- 研究方向 -->
+                            ${member.research ? `
+                                <div class="profile-section">
+                                    <h2><i class="fas fa-search"></i> 研究方向</h2>
+                                    <div class="research-areas">
+                                        ${member.research.split(',').map(area =>
+                                            `<span class="research-area">${area.trim()}</span>`
+                                        ).join('')}
+                                    </div>
+                                </div>
+                            ` : ''}
+
+                            <!-- 学术成果 -->
+                            <div class="profile-section">
+                                <h2><i class="fas fa-file-alt"></i> 学术成果</h2>
+                                ${publications.length > 0 ? `
+                                    <div class="publications-grid">
+                                        ${publications.map(pub => this.renderPublication(pub)).join('')}
+                                    </div>
+                                ` : '<p>暂无相关论文信息</p>'}
+                            </div>
+                        </div>
+
+                        <!-- 右侧内容 -->
+                        <div class="profile-sidebar">
+                            <!-- 快速统计 -->
+                            <div class="profile-section">
+                                <h2><i class="fas fa-chart-bar"></i> 统计信息</h2>
+                                <div class="stats-grid">
+                                    <div class="stat-item">
+                                        <div class="stat-number">${publications.length}</div>
+                                        <div class="stat-label">发表论文</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-number">${member.research ? member.research.split(',').length : 0}</div>
+                                        <div class="stat-label">研究方向</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 联系信息 -->
+                            <div class="profile-section">
+                                <h2><i class="fas fa-address-card"></i> 联系方式</h2>
+                                <div class="contact-info">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>${member.email}</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-building"></i>
+                                        <span>智能计算课题组</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>北京市海淀区清华大学</span>
+                                    </div>
+                                </div>
+                                <a href="mailto:${member.email}" class="back-button" style="margin-top: 1rem; width: 100%; justify-content: center;">
+                                    <i class="fas fa-paper-plane"></i> 发送邮件
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            renderPublication(publication) {
+                return `
+                    <div class="publication-item">
+                        <div class="publication-title">${publication.title}</div>
+                        <div class="publication-meta">
+                            <span>${publication.journal}</span>
+                            <span>${publication.year}</span>
+                        </div>
+                        ${publication.abstract ? `<div class="publication-abstract">${publication.abstract}</div>` : ''}
+                    </div>
+                `;
+            }
+
+            showError(message) {
+                const profileContent = document.getElementById('profileContent');
+                profileContent.innerHTML = `
+                    <div class="profile-section" style="text-align: center;">
+                        <i class="fas fa-exclamation-circle" style="font-size: 3rem; color: #ef4444; margin-bottom: 1rem;"></i>
+                        <h2>出错了</h2>
+                        <p>${message}</p>
+                        <a href="index.html" class="back-button">
+                            <i class="fas fa-arrow-left"></i> 返回主页
+                        </a>
+                    </div>
+                `;
+            }
+        }
+
+        // 初始化个人页面
+        document.addEventListener('DOMContentLoaded', function() {
+            new ProfilePage();
+        });
+    </script>
+</body>
+</html>
