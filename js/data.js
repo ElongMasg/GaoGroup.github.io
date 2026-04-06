@@ -26,9 +26,9 @@ class DataManager {
                 members: this.getInitialMembers(),
                 publications: this.getInitialPublications(),
                 settings: {
-                    groupName: '智能计算课题组',
-                    groupDescription: '探索人工智能前沿，推动科技创新发展',
-                    groupContact: 'contact@intellab.edu.cn'
+                    groupName: '溥渊未来技术学院电化学储能研究团队',
+                    groupDescription: '专注于下一代电化学储能技术的研究，包括固态锂金属电池、锂空气电池、多价态离子电池等前沿领域',
+                    groupContact: 'xiangwen.gao@sjtu.edu.cn'
                 }
             };
         }
@@ -75,14 +75,14 @@ class DataManager {
         return [
             {
                 id: '1',
-                name: '张伟教授',
+                name: '杲祥文',
                 position: 'professor',
-                email: 'zhangwei@university.edu.cn',
-                research: '机器学习, 深度学习, 计算机视觉',
-                bio: '张伟教授是人工智能领域的知名专家，在机器学习和深度学习方面有着丰富的研究经验。主持国家自然科学基金项目3项，发表SCI论文50余篇，其中多篇发表在国际顶级期刊和会议上。',
-                joinDate: '2020-01-01',
-                education: '清华大学计算机科学博士',
-                experience: '2015-2020 美国斯坦福大学博士后\n2020至今 清华大学教授'
+                email: 'xiangwen.gao@sjtu.edu.cn',
+                research: '固态锂金属电池, 锂空气电池, 多价态离子电池, 电化学储能系统',
+                bio: '杲祥文，上海交通大学溥渊未来技术学院长聘教轨副教授。专注于固态锂金属电池、锂空气电池、多价态离子电池等电化学储能系统的研究。曾获2018年度美国电化学协会K.M. Abraham奖和2018年度国家优秀自费留学生奖。',
+                joinDate: '2023-01-01',
+                education: '博士，英国牛津大学材料系（2013-2018）\n学士，复旦大学化学系（2009-2013）',
+                experience: '2023年-至今，上海交通大学溥渊未来技术学院，长聘教轨副教授\n2020年-2022年，英国牛津大学材料系，博士后\n2018年-2020年，美国德克萨斯大学奥斯汀分校，博士后'
             },
             {
                 id: '2',
@@ -146,57 +146,57 @@ class DataManager {
         return [
             {
                 id: '1',
-                title: '基于深度学习的图像识别新方法',
-                authors: '张伟, 李明, 王小红',
-                journal: 'IEEE Transactions on Pattern Analysis and Machine Intelligence',
-                year: 2024,
+                title: 'Solid-state lithium battery cathodes operating at low pressures',
+                authors: 'Xiangwen Gao, Boyang Liu, Bingkun Hu, Ziyang Ning, Dominic Spencer Jolly, Shengming Zhang, Johann Perera, Junfu Bu, Junliang Liu, C, Armstrong, Patrick S. Grant, Peter G. Bruce',
+                journal: 'Joule',
+                year: 2022,
                 type: 'journal',
-                doi: '10.1109/TPAMI.2024.001',
-                abstract: '本文提出了一种基于深度学习的图像识别新方法，通过改进网络结构和训练策略，显著提高了识别准确率。',
+                doi: '10.1016/j.joule.2022.02.002',
+                abstract: '研究了固态锂电池正极在低压条件下的操作机制，为固态电池的实际应用提供了新的思路。',
                 pdfUrl: '#'
             },
             {
                 id: '2',
-                title: '自然语言处理中的注意力机制优化',
-                authors: '李明, 张伟',
-                journal: 'ACL 2024',
-                year: 2024,
-                type: 'conference',
-                doi: '10.18653/v1/2024.acl-1.001',
-                abstract: '研究了自然语言处理中注意力机制的优化方法，提出了新的计算效率更高的注意力变体。',
+                title: 'Achieving Ultimate Efficiency in Aqueous Zinc Battery Anodes via Selective Electroplating for Aqueous Zinc Battery Anodes',
+                authors: 'Shengda D. Pu, Chen Gong, Yuanbo T Tang, Ziyang Ning, Junliang Liu, Shengming Zhang, Yi Yuan, Dominic Melvin, Sixie Yang, Liquan Pi, Joh, Zixuan Li, Boyang Liu, SC Edman Tsang, T. James Marrow, Roger C. Reed, Xiangwen Gao, Peter G. Bruce, Alex W. Robertson',
+                journal: 'Advanced Materials',
+                year: 2022,
+                type: 'journal',
+                doi: '10.1002/adma.202202552',
+                abstract: '通过选择性电沉积实现了水系锌电池阳极的终极效率，为水系电池的发展提供了新的方向。',
                 pdfUrl: '#'
             },
             {
                 id: '3',
-                title: '强化学习在智能决策中的应用',
-                authors: '陈博士, 张伟, 赵强',
-                journal: 'Nature Machine Intelligence',
-                year: 2023,
+                title: 'Facilitating Li+ Transportation by Ion-Selective COFs Composite Nanowire for Li-S Batteries',
+                authors: 'Wenqi Yan, Xiangwen Gao, Jin-Lin Yang, Xiaosong Xiong, Shuang Xia, Wen Huang, Yuhui Chen, Lijun Fu, Yusong Zhu, Yuping Wu',
+                journal: 'Small',
+                year: 2022,
                 type: 'journal',
-                doi: '10.1038/s42256-023-0001-0',
-                abstract: '探讨了强化学习在智能决策系统中的应用，提出了一个新颖的算法框架。',
+                doi: '10.1002/smll.202106679',
+                abstract: '通过离子选择性COFs复合纳米线促进Li+传输，显著提高了锂硫电池的性能。',
                 pdfUrl: '#'
             },
             {
                 id: '4',
-                title: '多模态学习的最新进展',
-                authors: '张伟, 刘芳, 王小红',
-                journal: 'arXiv preprint',
-                year: 2024,
-                type: 'preprint',
-                doi: 'arXiv:2024.00123',
-                abstract: '综述了多模态学习领域的最新研究进展，分析了现有方法的优缺点并提出了未来发展方向。',
+                title: 'Singlet oxygen and dioxetane formation in lithium-oxygen battery',
+                authors: 'Shanmu Dong, Sixie Yang, Yuhui Chen, Christian Kuss, Guanglei Cui, Lee R. Johnson, Xiangwen Gao, Peter G. Bruce',
+                journal: 'Joule',
+                year: 2022,
+                type: 'journal',
+                doi: '10.1016/j.joule.2021.12.003',
+                abstract: '研究了锂氧气电池中单线态氧和二氧杂环丁烷的形成机制，为理解电池反应机理提供了重要见解。',
                 pdfUrl: '#'
             },
             {
                 id: '5',
-                title: '计算机视觉中的小样本学习',
-                authors: '王小红, 李明, 张伟',
-                journal: 'CVPR 2024',
-                year: 2024,
-                type: 'conference',
-                doi: '10.1109/CVPR52729.2024.0001',
-                abstract: '提出了一种新的小样本学习方法，在计算机视觉任务中取得了显著的性能提升。',
+                title: 'High Performance through the Chlorine Respiration Mechanism',
+                authors: 'Xiaotong Fan, Kai Huang, Long Chen, Haipeng You, Menglei Yao, Hao Jiang, Ling Zhang, Cheng Lian, Xiangwen Gao, Chunzhong Li',
+                journal: 'Angewandte Chemie International Edition',
+                year: 2023,
+                type: 'journal',
+                doi: '10.1002/anie.202215342',
+                abstract: '通过氯呼吸机制实现了高性能电池，为新型电池设计提供了创新思路。',
                 pdfUrl: '#'
             }
         ];
