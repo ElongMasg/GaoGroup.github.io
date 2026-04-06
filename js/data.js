@@ -88,56 +88,56 @@ class DataManager {
                 id: '2',
                 name: '李明',
                 position: 'phd',
-                email: 'liming@stu.university.edu.cn',
-                research: '自然语言处理, 文本挖掘',
-                bio: '专注于自然语言处理和文本挖掘技术的研究，已发表多篇高水平论文。研究方向包括机器翻译、情感分析和知识图谱构建。',
+                email: 'liming@sjtu.edu.cn',
+                research: '固态电解质, 界面工程',
+                bio: '专注于固态电解质材料的研究，致力于开发高离子导电性和稳定性的固态电池材料。在固态锂电池界面工程方面有深入研究。',
                 joinDate: '2021-09-01',
-                education: '北京大学计算机科学硕士',
-                experience: '2021至今 清华大学博士生'
+                education: '清华大学材料科学硕士',
+                experience: '2021至今 上海交通大学溥渊未来技术学院博士生'
             },
             {
                 id: '3',
-                name: 'Ender',
+                name: '王小红',
                 position: 'master',
-                email: 'wangxh@stu.university.edu.cn',
-                research: '计算机视觉, 图像处理',
-                bio: '研究兴趣包括计算机视觉和图像处理，参与多个重要项目的研究工作。在目标检测和图像分割方面有深入研究。',
+                email: 'wangxh@sjtu.edu.cn',
+                research: '催化剂设计, 电极材料',
+                bio: '研究兴趣包括锂空气电池催化剂设计和电极材料优化，参与多个重要项目的研究工作。在氧气电极反应机理方面有深入研究。',
                 joinDate: '2022-09-01',
-                education: '北京理工大学计算机科学学士',
-                experience: '2022至今 清华大学硕士生'
+                education: '华东理工大学化学工程学士',
+                experience: '2022至今 上海交通大学溥渊未来技术学院硕士生'
             },
             {
                 id: '4',
                 name: '陈博士',
                 position: 'postdoc',
-                email: 'chenboshi@university.edu.cn',
-                research: '强化学习, 智能决策',
-                bio: '博士后研究员，专注于强化学习和智能决策系统的研究。在深度强化学习和多智能体系统方面有突出贡献。',
+                email: 'chenboshi@sjtu.edu.cn',
+                research: '多价离子电池, 材料设计',
+                bio: '博士后研究员，专注于多价态离子电池材料设计和电化学机理研究。在镁离子、钙离子电池电极材料开发方面有突出贡献。',
                 joinDate: '2023-03-01',
-                education: '香港科技大学计算机科学博士',
-                experience: '2023至今 清华大学博士后\n2019-2023 香港科技大学博士'
+                education: '中科院化学所电化学博士',
+                experience: '2023至今 上海交通大学溥渊未来技术学院博士后\n2019-2023 中科院化学所博士'
             },
             {
                 id: '5',
                 name: '刘芳',
                 position: 'master',
-                email: 'liufang@stu.university.edu.cn',
-                research: '机器学习, 数据挖掘',
-                bio: '硕士研究生，研究方向为机器学习和数据挖掘技术。在推荐系统和用户行为分析方面有深入研究。',
+                email: 'liufang@sjtu.edu.cn',
+                research: '水系电池, 锌离子电池',
+                bio: '硕士研究生，研究方向为水系锌离子电池和电化学储能系统。在锌离子电池电极材料和水系电解液优化方面有深入研究。',
                 joinDate: '2023-09-01',
-                education: '华中科技大学计算机科学学士',
-                experience: '2023至今 清华大学硕士生'
+                education: '复旦大学材料科学学士',
+                experience: '2023至今 上海交通大学溥渊未来技术学院硕士生'
             },
             {
                 id: '6',
                 name: '赵强',
                 position: 'phd',
-                email: 'zhaoqiang@stu.university.edu.cn',
-                research: '深度学习, 神经网络',
-                bio: '博士研究生，专注于深度学习和神经网络架构的研究。在神经网络结构搜索和模型压缩方面有重要成果。',
+                email: 'zhaoqiang@sjtu.edu.cn',
+                research: '锂硫电池, 电极材料',
+                bio: '博士研究生，专注于锂硫电池反应机理和电极材料设计。在硫正极材料改性和多硫化物吸附方面有重要成果。',
                 joinDate: '2020-09-01',
-                education: '上海交通大学计算机科学硕士',
-                experience: '2020至今 清华大学博士生'
+                education: '浙江大学化学工程硕士',
+                experience: '2020至今 上海交通大学溥渊未来技术学院博士生'
             }
         ];
     }
