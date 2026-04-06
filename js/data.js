@@ -108,9 +108,9 @@ class DataManager {
             },
             {
                 id: '4',
-                name: '陈博士',
+                name: '余冲',
                 position: 'postdoc',
-                email: 'chenboshi@sjtu.edu.cn',
+                email: 'yuchong@sjtu.edu.cn',
                 research: '多价离子电池, 材料设计',
                 bio: '博士后研究员，专注于多价态离子电池材料设计和电化学机理研究。在镁离子、钙离子电池电极材料开发方面有突出贡献。',
                 joinDate: '2023-03-01',
