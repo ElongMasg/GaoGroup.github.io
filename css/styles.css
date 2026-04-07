@@ -226,9 +226,10 @@ body {
 
 /* 关于我们 */
 .about-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
 }
 
 .about-text h3 {
