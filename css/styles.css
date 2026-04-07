@@ -617,15 +617,9 @@ body {
 }
 
 .contact-item i {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #2563eb, #7c3aed);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.1rem;
+    color: #2563eb;
+    width: 20px;
+    display: inline;
 }
 
 .contact-item h4 {
