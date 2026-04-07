@@ -88,14 +88,14 @@ class DataManager {
             },
             {
                 id: '2',
-                name: '李明',
+                name: '赵文宇',
                 position: 'phd',
                 email: 'liming@sjtu.edu.cn',
                 research: '固态电解质, 界面工程',
                 bio: '专注于固态电解质材料的研究，致力于开发高离子导电性和稳定性的固态电池材料。在固态锂电池界面工程方面有深入研究。',
-                joinDate: '2021-09-01',
+                joinDate: '2023-09-01',
                 education: '清华大学材料科学硕士',
-                experience: '2021至今 上海交通大学溥渊未来技术学院博士生'
+                experience: '2023至今 上海交通大学溥渊未来技术学院博士生'
             },
             {
                 id: '3',
@@ -110,7 +110,7 @@ class DataManager {
             },
             {
                 id: '4',
-                name: '余冲',
+                name: '陶柳',
                 position: 'postdoc',
                 email: 'yuchong@sjtu.edu.cn',
                 research: '多价离子电池, 材料设计',
@@ -132,14 +132,14 @@ class DataManager {
             },
             {
                 id: '6',
-                name: '赵强',
+                name: '余冲',
                 position: 'phd',
-                email: 'zhaoqiang@sjtu.edu.cn',
-                research: '锂硫电池, 电极材料',
-                bio: '博士研究生，专注于锂硫电池反应机理和电极材料设计。在硫正极材料改性和多硫化物吸附方面有重要成果。',
-                joinDate: '2020-09-01',
-                education: '浙江大学化学工程硕士',
-                experience: '2020至今 上海交通大学溥渊未来技术学院博士生'
+                email: 'ender1@sjtu.edu.cn',
+                research: '电池',
+                bio: '博士研究生，专注于和gpt聊天',
+                joinDate: '2023-09-01',
+                education: '希望小学',
+                experience: '2025至今 上海交通大学溥渊未来技术学院博士生'
             }
         ];
     }
@@ -193,6 +193,17 @@ class DataManager {
             {
                 id: '5',
                 title: 'High Performance through the Chlorine Respiration Mechanism',
+                authors: 'Xiaotong Fan, Kai Huang, Long Chen, Haipeng You, Menglei Yao, Hao Jiang, Ling Zhang, Cheng Lian, Xiangwen Gao, Chunzhong Li',
+                journal: 'Angewandte Chemie International Edition',
+                year: 2023,
+                type: 'journal',
+                doi: '10.1002/anie.202215342',
+                abstract: '通过氯呼吸机制实现了高性能电池，为新型电池设计提供了创新思路。',
+                pdfUrl: '#'
+            },
+            {
+                id: '6',
+                title: 'this is a test',
                 authors: 'Xiaotong Fan, Kai Huang, Long Chen, Haipeng You, Menglei Yao, Hao Jiang, Ling Zhang, Cheng Lian, Xiangwen Gao, Chunzhong Li',
                 journal: 'Angewandte Chemie International Edition',
                 year: 2023,
