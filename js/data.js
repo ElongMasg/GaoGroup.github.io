@@ -12,9 +12,9 @@ class DataManager {
                     members: this.getInitialMembers(),
                     publications: this.getInitialPublications(),
                     settings: {
-                        groupName: '智能计算课题组11',
-                        groupDescription: '探索人工智能前沿，推动科技创新发展',
-                        groupContact: 'contact@intellab.edu.cn'
+                        groupName: 'Gao Group',
+                        groupDescription: '探索能源与材料科学前沿，致力于开发高性能电化学储能系统，涵盖固态电池、锂空气电池、多价离子电池等领域',
+                        groupContact: 'xiangwen_gao@sjtu.edu.cn'
                     }
                 };
                 this.saveData(initialData);
@@ -26,8 +26,8 @@ class DataManager {
                 members: this.getInitialMembers(),
                 publications: this.getInitialPublications(),
                 settings: {
-                    groupName: '溥渊未来技术学院电化学储能研究团队',
-                    groupDescription: '专注于下一代电化学储能技术的研究，包括固态锂金属电池、锂空气电池、多价态离子电池等前沿领域',
+                    groupName: 'Gao Group',
+                    groupDescription: '探索能源与材料科学前沿，致力于开发高性能电化学储能系统，涵盖固态电池、锂空气电池、多价离子电池等领域',
                     groupContact: 'xiangwen.gao@sjtu.edu.cn'
                 }
             };
