@@ -1264,3 +1264,54 @@ body {
         font-size: 0.9rem;
     }
 }
+
+/* 展开按钮样式 */
+.expand-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.expand-btn {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.expand-btn:hover {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.expand-btn i {
+    margin-right: 0.5rem;
+}
+
+/* 隐藏内容网格布局 */
+#hiddenNews {
+    display: none;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .expand-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    #hiddenNews {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

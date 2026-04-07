@@ -11,6 +11,7 @@ class DataManager {
                 const initialData = {
                     members: this.getInitialMembers(),
                     publications: this.getInitialPublications(),
+                    news: this.getInitialNews(),
                     settings: {
                         groupName: 'Gao Group',
                         groupDescription: '探索能源与材料科学前沿，致力于开发高性能电化学储能系统，涵盖固态电池、锂空气电池、多价离子电池等领域',
@@ -25,6 +26,7 @@ class DataManager {
             this.inMemoryData = {
                 members: this.getInitialMembers(),
                 publications: this.getInitialPublications(),
+                news: this.getInitialNews(),
                 settings: {
                     groupName: 'Gao Group',
                     groupDescription: '探索能源与材料科学前沿，致力于开发高性能电化学储能系统，涵盖固态电池、锂空气电池、多价离子电池等领域',
@@ -202,6 +204,67 @@ class DataManager {
         ];
     }
 
+    getInitialNews() {
+        return [
+            {
+                id: '1',
+                title: '牛津大学Peter G. Bruce教授来访学院并进行学术交流',
+                date: '2025-01-29',
+                content: '牛津大学材料系Peter G. Bruce教授来访溥渊未来技术学院，与同学们召开了一次深入的组会交流。Bruce教授分享了宝贵的科研心得，与团队成员进行了深度的学术交流，为同学们的研究工作提供了重要指导。',
+                image: 'images/news/250129.jpg'
+            },
+            {
+                id: '2',
+                title: '杲祥文副教授获得美国电化学协会K.M. Abraham奖',
+                date: '2024-03-15',
+                content: '杲祥文副教授因其在电化学储能领域的突出贡献，荣获2018年度美国电化学协会K.M. Abraham奖。这一奖项充分肯定了他在固态电池和电化学储能系统研究方面的杰出成就。',
+                image: ''
+            },
+            {
+                id: '3',
+                title: '国家自然科学基金项目获批',
+                date: '2024-03-10',
+                content: '杲祥文副教授主持的"锂氧气电池气体扩散还原动力学机制及其调控探究"项目获得国家自然科学基金青年基金项目资助，这将有力推动团队在锂氧气电池领域的研究进展。',
+                image: ''
+            },
+            {
+                id: '4',
+                title: '团队在固态电池研究领域取得重要进展',
+                date: '2024-03-01',
+                content: '团队在固态锂电池正极低压操作方面取得重要突破，相关成果发表在Joule期刊上，为固态电池的实际应用提供了新的技术路径。',
+                image: ''
+            },
+            {
+                id: '5',
+                title: '实验室新设备投入使用',
+                date: '2024-02-20',
+                content: '实验室新购置的高精度电化学测试系统正式投入使用，这将大大提升团队的实验能力和研究效率，为后续的科研工作提供强有力的技术支撑。',
+                image: ''
+            },
+            {
+                id: '6',
+                title: '博士生李明在国际会议上做口头报告',
+                date: '2024-02-15',
+                content: '团队成员李明博士在第15届国际电化学能源会议上做了关于"固态电解质界面工程"的口头报告，获得了与会专家的高度评价。',
+                image: ''
+            },
+            {
+                id: '7',
+                title: '团队与工业界合作取得重要进展',
+                date: '2024-02-10',
+                content: '团队与某知名电池企业签署合作协议，共同开发下一代固态电池技术，这标志着团队的研究成果正在向产业化方向迈进。',
+                image: ''
+            },
+            {
+                id: '8',
+                title: '硕士生王小红获得优秀研究生奖学金',
+                date: '2024-02-05',
+                content: '团队成员王小红同学因其在锂空气电池催化剂设计方面的优秀研究成果，获得学校优秀研究生奖学金，展现了团队人才培养的优秀成果。',
+                image: ''
+            }
+        ];
+    }
+
     // 成员管理
     getMembers() {
         const data = this.getData();
@@ -241,6 +304,12 @@ class DataManager {
     getPublications() {
         const data = this.getData();
         return data ? data.publications : [];
+    }
+
+    // 新闻管理
+    getNews() {
+        const data = this.getData();
+        return data ? data.news : [];
     }
 
     addPublication(publication) {

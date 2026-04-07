@@ -178,6 +178,7 @@ class ResearchGroupWebsite {
         } else {
             this.loadPeople();
             this.loadPublications();
+            this.loadNews();
             this.loadSettings();
         }
     }
@@ -210,11 +211,20 @@ class ResearchGroupWebsite {
         const publicationsTableBody = document.getElementById('publicationsTableBody');
 
         if (publicationsList) {
-            publicationsList.innerHTML = publications.map(pub => this.renderPublicationItem(pub)).join('');
+            this.renderPublicationsWithExpand(publications);
         }
 
         if (publicationsTableBody) {
             publicationsTableBody.innerHTML = publications.map(pub => this.renderPublicationTableRow(pub)).join('');
+        }
+    }
+
+    loadNews() {
+        const news = dataManager.getNews();
+        const newsGrid = document.getElementById('newsGrid');
+
+        if (newsGrid) {
+            this.renderNewsWithExpand(news);
         }
     }
 
@@ -343,6 +353,125 @@ class ResearchGroupWebsite {
                 </div>
             </div>
         `;
+    }
+
+    renderPublicationsWithExpand(publications) {
+        const publicationsList = document.getElementById('publicationsList');
+        if (!publicationsList) return;
+
+        const maxVisible = 5;
+        const hasMore = publications.length > maxVisible;
+        const visiblePublications = publications.slice(0, maxVisible);
+
+        let html = '';
+
+        // Add visible publications
+        visiblePublications.forEach(pub => {
+            html += this.renderPublicationItem(pub);
+        });
+
+        // Add expand/collapse functionality
+        if (hasMore) {
+            const hiddenPublications = publications.slice(maxVisible);
+
+            // Add hidden publications container
+            html += '<div id="hiddenPublications" style="display: none;">';
+            hiddenPublications.forEach(pub => {
+                html += this.renderPublicationItem(pub);
+            });
+            html += '</div>';
+
+            // Add expand button
+            html += `
+                <div class="expand-container" style="text-align: center; margin-top: 2rem;">
+                    <button id="expandPublications" class="expand-btn" onclick="app.togglePublications()">
+                        <i class="fas fa-chevron-down"></i> 查看更多学术成果 (${publications.length - maxVisible}篇)
+                    </button>
+                </div>
+            `;
+        }
+
+        publicationsList.innerHTML = html;
+    }
+
+    togglePublications() {
+        const hiddenPublications = document.getElementById('hiddenPublications');
+        const expandBtn = document.getElementById('expandPublications');
+
+        if (!hiddenPublications || !expandBtn) return;
+
+        if (hiddenPublications.style.display === 'none') {
+            hiddenPublications.style.display = 'block';
+            expandBtn.innerHTML = '<i class="fas fa-chevron-up"></i> 收起';
+        } else {
+            hiddenPublications.style.display = 'none';
+            expandBtn.innerHTML = `<i class="fas fa-chevron-down"></i> 查看更多学术成果 (${hiddenPublications.children.length}篇)`;
+        }
+    }
+
+    renderNewsWithExpand(news) {
+        const newsGrid = document.getElementById('newsGrid');
+        if (!newsGrid) return;
+
+        const maxVisible = 6;
+        const hasMore = news.length > maxVisible;
+        const visibleNews = news.slice(0, maxVisible);
+
+        let html = '';
+
+        // Add visible news
+        visibleNews.forEach(item => {
+            html += this.renderNewsCard(item);
+        });
+
+        // Add expand/collapse functionality
+        if (hasMore) {
+            const hiddenNews = news.slice(maxVisible);
+
+            // Add hidden news container
+            html += '<div id="hiddenNews" style="display: none;">';
+            hiddenNews.forEach(item => {
+                html += this.renderNewsCard(item);
+            });
+            html += '</div>';
+
+            // Add expand button
+            html += `
+                <div class="expand-container" style="text-align: center; margin-top: 2rem; grid-column: 1 / -1;">
+                    <button id="expandNews" class="expand-btn" onclick="app.toggleNews()">
+                        <i class="fas fa-chevron-down"></i> 查看更多新闻动态 (${news.length - maxVisible}条)
+                    </button>
+                </div>
+            `;
+        }
+
+        newsGrid.innerHTML = html;
+    }
+
+    renderNewsCard(newsItem) {
+        return `
+            <div class="news-card">
+                ${newsItem.image ? `<img src="${newsItem.image}" alt="${newsItem.title}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">` : ''}
+                <div class="news-date">${newsItem.date}</div>
+                <h3>${newsItem.title}</h3>
+                <p>${newsItem.content}</p>
+            </div>
+        `;
+    }
+
+    toggleNews() {
+        const hiddenNews = document.getElementById('hiddenNews');
+        const expandBtn = document.getElementById('expandNews');
+
+        if (!hiddenNews || !expandBtn) return;
+
+        if (hiddenNews.style.display === 'none') {
+            hiddenNews.style.display = 'grid';
+            expandBtn.innerHTML = '<i class="fas fa-chevron-up"></i> 收起';
+        } else {
+            hiddenNews.style.display = 'none';
+            expandBtn.innerHTML = `<i class="fas fa-chevron-down"></i> 查看更多新闻动态 (${hiddenNews.children.length}条)`;
+        }
     }
 
     renderPublicationTableRow(publication) {
