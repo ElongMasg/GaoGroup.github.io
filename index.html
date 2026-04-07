@@ -34,27 +34,41 @@
     <!-- 首页横幅 -->
     <section id="home" class="hero">
         <div class="hero-background"></div>
-        <!-- 动态研究元素 -->
-        <div class="research-elements">
-            <div class="floating-element battery-icon" style="top: 15%; left: 10%; animation-delay: 0s;">
-                <i class="fas fa-battery-full"></i>
-                <span class="element-label">固态锂电池</span>
-            </div>
-            <div class="floating-element ai-icon" style="top: 25%; right: 15%; animation-delay: 2s;">
-                <i class="fas fa-brain"></i>
-                <span class="element-label">AI for Science</span>
-            </div>
-            <div class="floating-element oxygen-icon" style="bottom: 30%; left: 5%; animation-delay: 4s;">
-                <i class="fas fa-wind"></i>
-                <span class="element-label">锂空气电池</span>
-            </div>
-            <div class="floating-element atom-icon" style="bottom: 20%; right: 10%; animation-delay: 6s;">
-                <i class="fas fa-atom"></i>
-                <span class="element-label">多价离子电池</span>
-            </div>
-            <div class="floating-element molecule-icon" style="top: 40%; left: 50%; animation-delay: 8s;">
-                <i class="fas fa-flask"></i>
-                <span class="element-label">电化学储能</span>
+
+        <!-- 锂空气电池机制图 -->
+        <div class="battery-mechanism">
+            <div class="mechanism-container">
+                <div class="mechanism-title">锂空气电池工作机制</div>
+                <div class="battery-diagram">
+                    <!-- 阴极 (氧气电极) -->
+                    <div class="electrode cathode">
+                        <span style="position: absolute; top: -1.5rem; left: 50%; transform: translateX(-50%); font-size: 0.7rem; color: #10b981;">氧气电极</span>
+                    </div>
+
+                    <!-- 电解质区域 -->
+                    <div class="electrolyte">
+                        <div class="ion-flow"></div>
+                        <div class="oxygen-flow"></div>
+                        <div class="electron-flow"></div>
+
+                        <!-- 粒子效果 -->
+                        <div class="particle particle-1"></div>
+                        <div class="particle particle-2"></div>
+                        <div class="particle particle-3"></div>
+
+                        <span style="position: absolute; top: -1.2rem; left: 50%; transform: translateX(-50%); font-size: 0.7rem; color: #8b5cf6;">电解质</span>
+                    </div>
+
+                    <!-- 阳极 (锂电极) -->
+                    <div class="electrode anode">
+                        <span style="position: absolute; top: -1.5rem; left: 50%; transform: translateX(-50%); font-size: 0.7rem; color: #f59e0b;">锂电极</span>
+                    </div>
+                </div>
+
+                <div class="mechanism-labels">
+                    <span>O₂ + 4e⁻ + 4Li⁺ → 2Li₂O</span>
+                    <span>Li → Li⁺ + e⁻</span>
+                </div>
             </div>
         </div>
         <div class="container">
