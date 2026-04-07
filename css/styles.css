@@ -226,10 +226,9 @@ body {
 
 /* 关于我们 */
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .about-text h3 {
@@ -251,6 +250,7 @@ body {
 
 .about-image {
     text-align: center;
+    margin-top: 2rem;
 }
 
 .image-placeholder {
