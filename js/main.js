@@ -283,7 +283,10 @@ class ResearchGroupWebsite {
 
         return `
             <div class="person-card" data-position="${person.position}" onclick="window.location.href='profile.html?id=${person.id}'">
-                <div class="avatar">${person.name.charAt(0)}</div>
+                <div class="person-image">
+                    <img src="images/people/${encodeURIComponent(person.name)}.jpg" alt="${person.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="avatar" style="display: none;">${person.name.charAt(0)}</div>
+                </div>
                 <h3>${person.name}</h3>
                 <span class="person-role">${positionNames[person.position] || person.position}</span>
                 <p>${person.bio || '暂无简介'}</p>
