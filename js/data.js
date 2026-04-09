@@ -99,14 +99,14 @@ class DataManager {
             },
             {
                 id: '3',
-                name: '王小红',
-                position: 'master',
+                name: '杜贝贝',
+                position: 'phd',
                 email: 'wangxh@sjtu.edu.cn',
                 research: '催化剂设计, 电极材料',
                 bio: '研究兴趣包括锂空气电池催化剂设计和电极材料优化，参与多个重要项目的研究工作。在氧气电极反应机理方面有深入研究。',
                 joinDate: '2022-09-01',
                 education: '华东理工大学化学工程学士',
-                experience: '2022至今 上海交通大学溥渊未来技术学院硕士生'
+                experience: '2024至今 上海交通大学溥渊未来技术学院博士生'
             },
             {
                 id: '4',
@@ -121,14 +121,14 @@ class DataManager {
             },
             {
                 id: '5',
-                name: '刘芳',
-                position: 'master',
+                name: '刘兴博',
+                position: 'phd',
                 email: 'liufang@sjtu.edu.cn',
                 research: '水系电池, 锌离子电池',
-                bio: '硕士研究生，研究方向为水系锌离子电池和电化学储能系统。在锌离子电池电极材料和水系电解液优化方面有深入研究。',
+                bio: '博士研究生，研究方向为水系锌离子电池和电化学储能系统。在锌离子电池电极材料和水系电解液优化方面有深入研究。',
                 joinDate: '2023-09-01',
                 education: '复旦大学材料科学学士',
-                experience: '2023至今 上海交通大学溥渊未来技术学院硕士生'
+                experience: '2024至今 上海交通大学溥渊未来技术学院博士生'
             },
             {
                 id: '6',
@@ -138,7 +138,40 @@ class DataManager {
                 research: '电池',
                 bio: '博士研究生，专注于和gpt聊天',
                 joinDate: '2023-09-01',
-                education: '希望小学',
+                education: '希望小学毕业',
+                experience: '2025至今 上海交通大学溥渊未来技术学院博士生'
+            },
+            {
+                id: '7',
+                name: '韦茗轩',
+                position: 'phd',
+                email: 'ender1@sjtu.edu.cn',
+                research: '电池',
+                bio: '博士研究生',
+                joinDate: '2025-09-01',
+                education: '希望小学毕业',
+                experience: '2025至今 上海交通大学溥渊未来技术学院博士生'
+            },
+            {
+                id: '8',
+                name: '武成伟',
+                position: 'phd',
+                email: 'ender1@sjtu.edu.cn',
+                research: '电池',
+                bio: '博士研究生',
+                joinDate: '2025-09-01',
+                education: '希望小学毕业',
+                experience: '2025至今 上海交通大学溥渊未来技术学院博士生'
+            },
+            {
+                id: '9',
+                name: '余冲',
+                position: 'phd',
+                email: 'ender1@sjtu.edu.cn',
+                research: '电池',
+                bio: '博士研究生',
+                joinDate: '2025-09-01',
+                education: '希望小学毕业',
                 experience: '2025至今 上海交通大学溥渊未来技术学院博士生'
             }
         ];
